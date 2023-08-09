@@ -1,0 +1,8 @@
+.button {
+    background-color: azure;
+    font-size: 1rem;
+    padding: 2px;
+    border-radius: 100%;
+    cursor: pointer;
+    border: none;
+}
