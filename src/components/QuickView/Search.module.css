@@ -1,0 +1,15 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.wrapper input,
+.wrapper input:focus,
+.wrapper input:hover {
+  border: none;
+  background: none;
+  outline: none;
+}
+

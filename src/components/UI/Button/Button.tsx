@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Button.module.css";
 
 interface ButtonProps {
+  id?: string,
   type?: string;
   children: any;
   onClick?: any;
@@ -10,7 +11,7 @@ interface ButtonProps {
 
 export const Button = ({ children, onClick, className }: ButtonProps) => {
   return (
-    <button className={`${styles.button} ${className}`} onClick={onClick}>
+    <button className={`${className} ${styles.button}`} onClick={onClick}>
       {children}
     </button>
   );

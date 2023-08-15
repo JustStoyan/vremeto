@@ -1,0 +1,15 @@
+.wrapper {
+    background-color: rgba(224, 224, 224, 0.459);
+    height: 12rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.title {
+    font-size: 1.2rem;
+    width: 100%;
+    margin-left: 2rem;
+    color: #A4A6Ac
+}

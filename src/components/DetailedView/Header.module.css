@@ -1,0 +1,26 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.buttons button {
+  font-size: 1rem;
+  padding: 10px;
+
+}
+
+
+
+.selected {
+  color: white;
+  background-color: black !important;
+  font-size: 1.2rem;
+}

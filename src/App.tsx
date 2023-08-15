@@ -1,11 +1,12 @@
-import "./App.css";
+
+import styles from './App.module.css'
 import { DetailedView } from "./components/DetailedView";
 import { QuickView } from "./components/QuickView";
 
 function App() {
   return (
-    <div className="App">
-      <div className="wrapper">
+    <div className={styles.App}>
+      <div className={styles.wrapper}>
         <QuickView />
         <DetailedView />
       </div>

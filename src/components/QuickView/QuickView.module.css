@@ -2,6 +2,13 @@
     background-color: white;
     border-top-left-radius: 40px;
     border-bottom-left-radius: 40px;
-    height: 90vh
+    height: 90vh;
+    
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-around;
+    
 
 }
+

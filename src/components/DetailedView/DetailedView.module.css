@@ -1,0 +1,12 @@
+.flex-wrapper {
+    display: flex;
+    flex-grow: 2;
+    flex-flow: column wrap;
+    padding: 3.5rem;
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4rem;
+}

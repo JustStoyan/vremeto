@@ -1,0 +1,9 @@
+.wrapper {
+    width: 100%;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
