@@ -4,6 +4,7 @@ import styles from "./Button.module.css";
 interface ButtonProps {
   id?: string,
   type?: string;
+  title?:string;
   children: any;
   onClick?: any;
   className?: string;

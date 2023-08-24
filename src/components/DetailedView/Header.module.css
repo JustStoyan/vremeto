@@ -1,26 +1,37 @@
 .wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
+.forcast-type {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2rem;
 }
 
-.buttons button {
-  font-size: 1rem;
-  padding: 10px;
-
+.forcast-type button {
+    font-size: 1.5rem;
 }
 
+.forcast-type-active{
+  text-decoration: underline;
+}
 
+.metric-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.metric-type button {
+    font-size: 1rem;
+    padding: 10px;
+}
 
 .selected {
-  color: white;
-  background-color: black !important;
-  font-size: 1.2rem;
+    color: white;
+    background-color: black !important;
+    font-size: 1.2rem;
 }

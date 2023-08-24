@@ -1,17 +1,21 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  mesureIn: "celsius",
+    mesureIn: 'celsius',
+    forcast: 'today',
 };
 
 const uiSlice = createSlice({
-  name: "ui",
-  initialState,
-  reducers: {
-    changeUnit(state, action) {
-      state.mesureIn = action.payload;
+    name: 'ui',
+    initialState,
+    reducers: {
+        changeUnit(state, action) {
+            state.mesureIn = action.payload;
+        },
+        changeForcastWindow(state, action) {
+            state.forcast = action.payload;
+        },
     },
-  },
 });
 
 export const uiActions = uiSlice.actions;
