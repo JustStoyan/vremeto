@@ -9,7 +9,7 @@ import { Visibility } from './Visibility';
 import { Forcast } from '../Forcast';
 export const DetailedView = () => {
     return (
-        <div className={styles['flex-wrapper']}>
+        <div className={`${styles['flex-wrapper']} ${styles.wrapper}`}>
             <Header />
             <Forcast />
             <h2>Detailed View</h2>

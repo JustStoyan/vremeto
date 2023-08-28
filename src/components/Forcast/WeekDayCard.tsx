@@ -5,7 +5,7 @@ interface DayInterface {
   iconUrl: string;
   minTemp: number;
   maxTemp: number;
-  hours: string;
+  hours?: string;
 }
 
 export const WeekDayCard = ({
@@ -17,10 +17,8 @@ export const WeekDayCard = ({
 }: DayInterface) => {
   return (
     <div className={styles.wrapper}>
-      <div className={styles["day-and-icon"]}>
-        <h4>{dayName}</h4>
-        <img src={iconUrl} alt="Weather icon representation" />
-      </div>
+      {dayName && <h4>{dayName}</h4>}
+      <img src={iconUrl} alt="Weather icon representation" />
       <div className={styles["temp-wrapper"]}>
         <p>
           {`${minTemp}`}

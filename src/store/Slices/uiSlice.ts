@@ -1,6 +1,11 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-const initialState = {
+interface UiState {
+    mesureIn: 'celsius' | 'fahrenheit'; 
+    forcast: 'today' | 'tomorrow'; 
+}
+
+const initialState: UiState = {
     mesureIn: 'celsius',
     forcast: 'today',
 };
@@ -9,10 +14,10 @@ const uiSlice = createSlice({
     name: 'ui',
     initialState,
     reducers: {
-        changeUnit(state, action) {
+        changeUnit(state, action: PayloadAction<'celsius' | 'fahrenheit'>) {
             state.mesureIn = action.payload;
         },
-        changeForcastWindow(state, action) {
+        changeForcastWindow(state, action: PayloadAction<'today' | 'tomorrow'>) {
             state.forcast = action.payload;
         },
     },

@@ -1,8 +1,6 @@
 .wrapper {
     display: flex;
-    flex-flow: row;
-    gap: 10px;
-    justify-content: flex-start;
-    align-items: center;
-    overflow: auto;
+    flex-direction: row;
+    justify-content: space-around;
 }
+
