@@ -1,0 +1,13 @@
+.wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding-left: 50px;
+  height: 80px;
+}
+
+.wind-speed {
+  display: flex;
+  align-items: center;
+  font-size: 3rem;
+}

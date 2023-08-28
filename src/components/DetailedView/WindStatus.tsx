@@ -9,7 +9,7 @@ export const WindStatus = () => {
   const windSpeed = data && data.wind.speed;
   return (
     <div>
-      <div className={styles["wind-wrapper"]}>
+      <div className={styles["wrapper"]}>
         <span className={styles["wind-speed"]}>{windSpeed}</span>{" "}
         <sub>km/h</sub>
       </div>

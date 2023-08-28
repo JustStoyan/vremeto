@@ -1,9 +1,11 @@
 .wrapper img{
-    width: 180px;
+    width: 10rem;
+    padding-left: 80px  
 }
 
 @media screen and (max-width: 481px) {
     .wrapper img{
-        width: 100px
+        width: 8rem;
+        padding-left: 0;
     }
 }

@@ -1,0 +1,26 @@
+.wrapper {
+  width: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  padding: 20px 10px;
+  border-radius: 16px;
+  font-size: 25px;
+  border: 1px solid black;
+}
+
+
+@media screen and (max-width: 481px) {
+    .wrapper {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        padding: 20px 10px;
+        border-radius: 16px;
+        font-size: 20px;
+        border: 1px solid black;
+      }
+}

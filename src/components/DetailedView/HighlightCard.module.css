@@ -1,13 +1,29 @@
 .wrapper {
   display: flex;
+  padding-top: 10px;
   flex-direction: column;
-  background-color: blueviolet;
-  width: 10rem;
+  background-color: #fff;
+  width: 18rem;
+  height: 10rem;
   border-radius: 14px;
 }
 
-.wrapper h3 {
+.title {
+  font-size: 1.2rem;
   padding-left: 20px;
   padding-top: 10px;
-  color: #a4a6ac;
+  color: #b0b0b0
+}
+
+@media screen and (max-width: 481px) {
+  .wrapper {
+    background-color: #fff;
+    width: 14rem;
+    height: 8rem;
+    border-radius: 14px;
+  }
+  
+  .title {
+   font-size: 20px;
+  }
 }

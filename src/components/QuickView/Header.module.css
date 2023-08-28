@@ -1,8 +1,13 @@
 .wrapper {
+  font-size: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
+}
+
+.wrapper input {
+  font-size: 20px;
 }
 
 @media screen and (max-width: 481px) {

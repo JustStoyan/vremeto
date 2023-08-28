@@ -9,4 +9,15 @@
     background: none;
     border: none;
     outline: none;
+    padding-left: 2rem;
+}
+
+@media screen and (max-width: 481px) {
+    .wrapper {
+        gap: 2px;
+    }
+
+    .wrapper input {
+       width: 12rem;
+    }
 }

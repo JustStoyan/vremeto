@@ -1,0 +1,30 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-left: 100px;
+  gap: 1.5rem;
+}
+
+.degree {
+  font-size: 96px;
+}
+
+.day-and-time {
+  display: flex;
+  gap: 10px;
+}
+
+.time {
+  color: #a4a6ac;
+}
+
+@media screen and (max-width: 481px) {
+  .wrapper {
+    padding-left: 0px;
+    gap: 0.5rem;
+  }
+
+  .degree {
+    font-size: 74px;
+  }
+}

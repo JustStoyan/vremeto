@@ -5,24 +5,26 @@
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  background-color: aquamarine;
+  background-color: #c4c5c8;
+  overflow-x: hidden;
 }
 
 .app {
-  width: 90vw;
-  height: 90vh;
+  width: 80vw;
+  height: 80vh;
   display: flex;
   flex-direction: row;
-  background-color: aliceblue;
   border-radius: 40px;
+  background-color: #fff;
 }
 
 @media screen and (max-width: 481px) {
   .app {
- 
     display: flex;
     flex-direction: column;
-    background-color: aliceblue;
     border-radius: 40px;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
   }
 }

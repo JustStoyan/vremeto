@@ -15,15 +15,13 @@ export const DegreeAndDay = () => {
 
   return (
     <div className={styles.wrapper}>
-      <div className={`quick__view__margin`}>
-        <p className={styles.degree}>
-          {temp}
-          {metric === "celsius" ? <sup>°C</sup> : <sup>°F</sup>}
-        </p>
-        <div className={styles["day-and-time"]}>
-          <p>{day}, </p>
-          <p className={styles.time}>{hours}</p>
-        </div>
+      <p className={styles.degree}>
+        {temp}
+        {metric === "celsius" ? <sup>°C</sup> : <sup>°F</sup>}
+      </p>
+      <div className={styles["day-and-time"]}>
+        <p>{day}, </p>
+        <p className={styles.time}>{hours}</p>
       </div>
     </div>
   );

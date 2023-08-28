@@ -1,4 +1,23 @@
 .wrapper {
   display: flex;
   align-items: center;
+  gap: 30px;
+  font-size: 25px;
+  padding-left: 80px;
+}
+
+.wrapper img {
+  width: 4rem;
+}
+
+@media screen and (max-width: 481px) {
+  .wrapper {
+    gap: 2px;
+    padding-left: 0;
+    justify-content: center;
+  }
+
+  .wrapper img {
+    width: 2.5rem;
+  }
 }
