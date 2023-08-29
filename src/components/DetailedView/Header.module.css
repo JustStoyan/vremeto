@@ -20,6 +20,17 @@
   color: black;
 }
 
+.metric-type {
+  display: flex;
+  gap: 0.5rem;
+ 
+}
+
+.metric-type__selected {
+  background-color: grey;
+  font-size: 0.5rem;
+}
+
 @media screen and (max-width: 481px) {
   .wrapper {
     padding: 0 20px;

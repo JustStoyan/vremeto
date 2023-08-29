@@ -44,7 +44,9 @@ export const Header = () => {
       <div className={styles["metric-type"]}>
         <Button
           id="celsius"
-          className={metricInUse === "celsius" ? styles.selected : ""}
+          className={
+            metricInUse === "celsius" ? styles["metric-type__selected"] : ""
+          }
           onClick={changeMetricHandler}
         >
           <sup id="celsius">°</sup>
@@ -52,7 +54,9 @@ export const Header = () => {
         </Button>
         <Button
           id="fahrenheit"
-          className={metricInUse === "fahrenheit" ? styles.selected : ""}
+          className={
+            metricInUse === "fahrenheit" ? styles["metric-type__selected"] : ""
+          }
           onClick={changeMetricHandler}
         >
           <sup id="fahrenheit">°</sup>

@@ -17,8 +17,7 @@
   border-radius: 40px;
   background-color: #fff;
 }
-
-@media screen and (max-width: 481px) {
+@media screen and (max-width: 1440px) {
   .app {
     display: flex;
     flex-direction: column;
@@ -28,3 +27,6 @@
     border-radius: 0;
   }
 }
+
+
+

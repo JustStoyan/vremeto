@@ -16,7 +16,7 @@
   
 }
 
-@media screen and (max-width: 481px) {
+@media screen and (max-width: 1440px) {
   .wrapper {
     margin-top: 3.5rem;
   }
@@ -29,3 +29,4 @@
     justify-items: center;
   }
 }
+
