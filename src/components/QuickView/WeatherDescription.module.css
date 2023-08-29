@@ -1,11 +1,23 @@
 .wrapper {
-    width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-size: 25px;
+  padding-left: 80px;
 }
 
-.main {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-flow: row wrap;
-    gap: 1.2rem;
+.wrapper img {
+  width: 4rem;
+}
+
+@media screen and (max-width: 481px) {
+  .wrapper {
+    gap: 2px;
+    padding-left: 0;
+    justify-content: center;
+  }
+
+  .wrapper img {
+    width: 2.5rem;
+  }
 }

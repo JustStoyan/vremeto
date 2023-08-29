@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { configActions } from "../../store/Slices/configSlice";
 import { SearchIcon } from "../UI/Icons/SearchIcon";
 import styles from "./Search.module.css";
@@ -19,12 +19,11 @@ export const Search = () => {
 
   const searchForDataHandler = (e: any) => {
     e.preventDefault();
-    dispatch(configActions.changeCityName(city))
+    dispatch(configActions.changeCityName(city));
     setSkip((prev) => (prev = false));
-    
   };
 
-  const { data, error, isLoading } = useGetWeatherByCityQuery(city, { skip });
+  const { data } = useGetWeatherByCityQuery(city, { skip });
   console.log(data);
 
   return (

@@ -1,0 +1,20 @@
+.wrapper {
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ 
+}
+
+.sunrise, .sunset {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 50px;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+
+.sunrise, .sunset div {
+   font-weight: bold;
+}

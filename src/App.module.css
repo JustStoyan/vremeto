@@ -1,12 +1,32 @@
-.App {
-  background-color: aliceblue;
-  width: 90vw;
-  height: 90vh;
-  border-radius: 40px;
+.app-wrapper {
+  position: static;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #c4c5c8;
+  overflow-x: hidden;
 }
 
-.wrapper {
- display: flex;
- flex-flow: row wrap;
- 
+.app {
+  width: 80vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  border-radius: 40px;
+  background-color: #fff;
 }
+@media screen and (max-width: 1440px) {
+  .app {
+    display: flex;
+    flex-direction: column;
+    border-radius: 40px;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+  }
+}
+
+
+

@@ -1,0 +1,24 @@
+.wrapper {
+  background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 10%;
+  height: 8rem;
+  border-radius: 14px;
+
+}
+
+.temp-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 2px;
+}
+
+@media screen and (max-width: 481px) {
+    .wrapper {
+      width: 12%;
+      border-radius: 10px;
+    }
+}

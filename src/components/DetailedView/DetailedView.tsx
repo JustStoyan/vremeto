@@ -6,22 +6,18 @@ import styles from "./DetailedView.module.css";
 import { Humidity } from "./Humidity";
 import { Header } from "./Header";
 import { Visibility } from "./Visibility";
-import { WeekForcast } from "../WeekForcast";
+import { Forcast } from "../Forcast";
 export const DetailedView = () => {
   return (
-    <div className={styles["flex-wrapper"]}>
+    <div className={`${styles["flex-wrapper"]} ${styles.wrapper}`}>
       <Header />
-      <WeekForcast />
+      <Forcast />
+      <h2>Detailed View</h2>
       <div className={styles["grid-wrapper"]}>
         <HighlightCard title="Wind Status" component={<WindStatus />} />
         <HighlightCard title="Sunrise & Sunset" component={<SunRiseAndSet />} />
         <HighlightCard title="Humidity" component={<Humidity />} />
         <HighlightCard title="Visibility" component={<Visibility />} />
-        <HighlightCard title="Sunrise & Sunset" component={<SunRiseAndSet />} />
-        <HighlightCard title="Humidity" component={<Humidity />} />
-        <HighlightCard title="Wind Status" component={<WindStatus />} />
-        <HighlightCard title="Sunrise & Sunset" component={<SunRiseAndSet />} />
-        <HighlightCard title="Humidity" component={<Humidity />} />
       </div>
     </div>
   );

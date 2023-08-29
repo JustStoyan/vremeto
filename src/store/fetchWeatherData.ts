@@ -17,4 +17,5 @@ export const weatherApi: any = createApi({
   }),
 });
 
-export const { useGetWeatherByCityQuery, useGetForcastByCityQuery } = weatherApi;
+export const { useGetWeatherByCityQuery, useGetForcastByCityQuery } =
+  weatherApi;

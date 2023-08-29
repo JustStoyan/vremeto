@@ -10,8 +10,8 @@ export const WeatherDescription = () => {
   const weatherDescription =
     data && !isLoading ? data.weather[0].description : "";
   return (
-    <div className={styles.wrapper}>
-      <div className={`${styles.main} quick__view__margin`}>
+    
+      <div className={`${styles.wrapper}`}>
         <div>
           <img
             src={`https://openweathermap.org/img/wn/${weatherIcon}.png`}
@@ -20,6 +20,6 @@ export const WeatherDescription = () => {
         </div>
         <p>{weatherDescription}</p>
       </div>
-    </div>
+    
   );
 };

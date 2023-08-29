@@ -1,6 +1,5 @@
 import styles from "./HighlightCard.module.css";
 
-
 export const HighlightCard = ({ title, component }: any) => {
   return (
     <div className={styles.wrapper}>
