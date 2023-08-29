@@ -1,5 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/query";
+import { rtkQueryErrorLogger } from "./rtkQueryErrorLogger";
 
 import { weatherApi } from "./fetchWeatherData";
 import uiSlice from "./Slices/uiSlice";
@@ -13,7 +14,9 @@ export const store = configureStore({
     config: configSlice,
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(weatherApi.middleware),
+    getDefaultMiddleware()
+      .concat(weatherApi.middleware)
+      .concat(rtkQueryErrorLogger),
 });
 
 setupListeners(store.dispatch);

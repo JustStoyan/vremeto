@@ -7,6 +7,7 @@ export const DegreeAndDay = () => {
   const metric = useSelector((state: any) => state.ui.mesureIn);
   const city = useSelector((state: any) => state.config.city);
   const { data, isLoading } = useGetWeatherByCityQuery(city);
+  
 
   const timestamp = data && data.dt;
   const temp = data && getTemperature(data.main.temp, metric);
