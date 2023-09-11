@@ -1,11 +1,6 @@
-import { useSelector } from "react-redux";
-import { useGetWeatherByCityQuery } from "../../store/fetchWeatherData";
-import styles from './WeatherImage.module.css';
+import styles from "./WeatherImage.module.css";
 
-export const WeatherImage = () => {
-  const city = useSelector((state: any) => state.config.city);
-  const { data } = useGetWeatherByCityQuery(city);
-  const weatherIcon = data && data.weather[0].icon;
+export const WeatherImage = ({ weatherIcon }: any) => {
   return (
     <div className={styles.wrapper}>
       <img

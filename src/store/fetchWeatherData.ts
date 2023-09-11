@@ -14,8 +14,15 @@ export const weatherApi: any = createApi({
       query: (cityName) =>
         `forecast?q=${cityName}&units=metric&appid=3f5fc19a68de4cf17e31617a6c9348a0`,
     }),
+    getWeatherByLocation: builder.query({
+      query: (location) =>
+        `weather?lat=${location.lat}&lon=${location.lon}&appid=3f5fc19a68de4cf17e31617a6c9348a0&units=metric`,
+    })
   }),
 });
 
-export const { useGetWeatherByCityQuery, useGetForcastByCityQuery } =
-  weatherApi;
+export const {
+  useGetWeatherByCityQuery,
+  useGetForcastByCityQuery,
+  useGetWeatherByLocationQuery,
+} = weatherApi;

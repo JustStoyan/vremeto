@@ -8,23 +8,16 @@ import { useGetWeatherByCityQuery } from "../../store/fetchWeatherData";
 
 export const Search = () => {
   const [city, setCity] = useState<string>("");
-  const [skip, setSkip] = useState<boolean>(true);
   const dispatch = useDispatch();
 
   const changeCityHandler = (e: any) => {
-    !skip && setSkip(true);
-
     setCity((prev) => (prev = e.target.value));
   };
 
   const searchForDataHandler = (e: any) => {
     e.preventDefault();
     dispatch(configActions.changeCityName(city));
-    setSkip((prev) => (prev = false));
   };
-
-  const { data } = useGetWeatherByCityQuery(city, { skip });
-  console.log(data);
 
   return (
     <div className={styles.wrapper}>

@@ -1,12 +1,6 @@
-import { useSelector } from "react-redux";
-import { useGetWeatherByCityQuery } from "../../store/fetchWeatherData";
 import styles from "./WindStatus.module.css";
 
-export const WindStatus = () => {
-  const city = useSelector((state: any) => state.config.city);
-  const { data } = useGetWeatherByCityQuery(city);
-
-  const windSpeed = data && data.wind.speed;
+export const WindStatus = ({ windSpeed }: any) => {
   return (
     <div>
       <div className={styles["wrapper"]}>

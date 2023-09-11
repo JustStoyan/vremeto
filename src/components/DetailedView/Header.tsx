@@ -23,7 +23,7 @@ export const Header = () => {
         <Button onClick={changeForcastHandler}>
           <span
             className={
-              forcastType === "today" ? styles["forcast-type-active"] : ""
+              forcastType === "today" ? styles["forcast-type--active"] : ""
             }
             id="today"
           >
@@ -33,7 +33,7 @@ export const Header = () => {
         <Button onClick={changeForcastHandler} id="week">
           <span
             className={
-              forcastType === "week" ? styles["forcast-type-active"] : ""
+              forcastType === "week" ? styles["forcast-type--active"] : ""
             }
             id="week"
           >
@@ -45,7 +45,7 @@ export const Header = () => {
         <Button
           id="celsius"
           className={
-            metricInUse === "celsius" ? styles["metric-type__selected"] : ""
+            metricInUse === "celsius" ? styles["metric-type--selected"] : ""
           }
           onClick={changeMetricHandler}
         >
@@ -55,7 +55,7 @@ export const Header = () => {
         <Button
           id="fahrenheit"
           className={
-            metricInUse === "fahrenheit" ? styles["metric-type__selected"] : ""
+            metricInUse === "fahrenheit" ? styles["metric-type--selected"] : ""
           }
           onClick={changeMetricHandler}
         >
