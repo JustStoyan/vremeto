@@ -7,17 +7,21 @@ import { WeatherDescription } from "./WeatherDescription";
 
 import { SearchedLocation } from "./SearchedLocation";
 
-export const QuickView = () => {
+export const QuickView = ({ weatherDetails }: any) => {
   return (
     <div className={styles.wrapper}>
       <Header />
-      <div className={styles["quick-data"]}>
-        <WeatherImage />
-        <DegreeAndDay />
-        <WeatherDescription />
-        {/* <RainProbability /> */}
-        <SearchedLocation />
-      </div>
+      {weatherDetails && (
+        <div className={styles["quick-data"]}>
+          <WeatherImage weatherIcon={weatherDetails.weather[0].icon} />
+          <DegreeAndDay />
+          <WeatherDescription
+            weatherIcon={weatherDetails.weather[0].icon}
+            weatherDescription={weatherDetails.weather[0].description}
+          />
+          <SearchedLocation cityName={weatherDetails.name} country={weatherDetails.sys.country} />
+        </div>
+      )}
     </div>
   );
 };

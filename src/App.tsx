@@ -1,6 +1,5 @@
 import styles from "./App.module.css";
-import { DetailedView } from "./components/DetailedView";
-import { QuickView } from "./components/QuickView";
+import { WeatherData } from "./components/DetailedView/WeatherData";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -10,8 +9,7 @@ function App() {
     <div className={styles["app-wrapper"]}>
       <div className={styles.app}>
         <ToastContainer />
-        <QuickView />
-        <DetailedView />
+        <WeatherData/>
       </div>
     </div>
   );
