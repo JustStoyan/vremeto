@@ -7,7 +7,6 @@
   width: 10%;
   height: 8rem;
   border-radius: 14px;
-
 }
 
 .temp-wrapper {
@@ -16,9 +15,24 @@
   gap: 2px;
 }
 
-@media screen and (max-width: 481px) {
-    .wrapper {
-      width: 12%;
-      border-radius: 10px;
-    }
+@media screen and (max-width: 900px) {
+  .wrapper {
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+    justify-content:space-around;
+    margin-bottom: 15px;
+    width: 90px;
+    height: 8rem;
+    border-radius: 14px;
+  }
+
+  .temp-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row;
+    gap: 2px;
+  }
 }

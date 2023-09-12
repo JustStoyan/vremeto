@@ -12,7 +12,7 @@ export const DetailedView = ({ weatherDetails, error }: any) => {
   return (
     <div className={`${styles["flex-wrapper"]} ${styles.wrapper}`}>
       <Header />
-      {!error && <Forcast />}
+      {weatherDetails && <Forcast />}
       <h2>Detailed View</h2>
       {weatherDetails && (
         <div className={styles["grid-wrapper"]}>

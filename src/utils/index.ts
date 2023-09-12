@@ -54,10 +54,47 @@ export const avrgTemp = (tempList: number[]) => {
   return avrgResult;
 };
 
-//Retrieve the current location
-
-export const retrieveCurrenLocation = async () => {
-   navigator.geolocation.getCurrentPosition(async (position) => {
-    const location = {postMessage}
-  });
+//Retrieve the current geolocation
+export const retrieveCurrenLocation = (dispatch: any, configActions:any) => {
+  if ("geolocation" in navigator) {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const newLocation = {
+          lat: Number(position.coords.latitude.toFixed(2)),
+          lon: Number(position.coords.longitude.toFixed(2)),
+        };
+        dispatch(configActions.changeLocation(newLocation));
+      },
+      (error) => {
+        console.error("Error getting user location:", error);
+      }
+    );
+  } else {
+    console.error("Geolocation is not available in this browser");
+  }
 };
+
+//Create a list with unique days from a list with 5 results per each day.
+
+export const createUniqeDaysData = (list: any) => {
+  const weekDays: any = [];
+  let today = "";
+
+  list.forEach((result: any) => {
+    let currentDayData = {
+      day: getCurrentDay(result.dt).slice(0, 3),
+      minTemp: result.main.temp_min,
+      maxTemp: result.main.temp_max,
+      icon: result.weather[0].icon,
+    };
+
+    if (today !== currentDayData.day) {
+      weekDays.push(currentDayData);
+      today = currentDayData.day;
+    }
+  });
+
+  return weekDays;
+};
+
+

@@ -2,12 +2,12 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface ConfigState {
   city: string;
-  location: Object;
+  location: any;
 }
 
 const initialState: ConfigState = {
   city: "Sofia",
-  location: { lat: 42.16, lon: 24.72 },
+  location: null,
 };
 
 const configSlice = createSlice({

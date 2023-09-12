@@ -1,4 +1,3 @@
-import { useGetForcastByCityQuery } from "../../store/fetchWeatherData";
 import { useSelector } from "react-redux";
 import { WeekDayCard } from "./WeekDayCard";
 
@@ -11,13 +10,13 @@ import {
   getTemperature,
 } from "../../utils";
 
-export const TodayForcast = () => {
-  const city = useSelector((state: any) => state.config.city);
+export const TodayForcast = ({ forcastDetails }: any) => {
   const mesureIn = useSelector((state: any) => state.ui.mesureIn);
 
-  const { data } = useGetForcastByCityQuery(city);
-  const listWithForcasts = data ? data.list : [];
-  const today = data ? getCurrentDay(listWithForcasts[0].dt).slice(0, 3) : "";
+  const listWithForcasts = forcastDetails ? forcastDetails.list : [];
+  const today = forcastDetails
+    ? getCurrentDay(listWithForcasts[0].dt).slice(0, 3)
+    : false;
 
   return (
     <div className={styles.wrapper}>

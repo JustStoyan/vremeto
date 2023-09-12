@@ -2,9 +2,8 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { configActions } from "../../store/Slices/configSlice";
 import { SearchIcon } from "../UI/Icons/SearchIcon";
+import AutoComplete from "../AutoCompleate";
 import styles from "./Search.module.css";
-
-import { useGetWeatherByCityQuery } from "../../store/fetchWeatherData";
 
 export const Search = () => {
   const [city, setCity] = useState<string>("");
@@ -17,6 +16,8 @@ export const Search = () => {
   const searchForDataHandler = (e: any) => {
     e.preventDefault();
     dispatch(configActions.changeCityName(city));
+    dispatch(configActions.changeLocation(null));
+    setCity((prev) => (prev = ""));
   };
 
   return (
@@ -25,6 +26,7 @@ export const Search = () => {
         <SearchIcon />
       </div>
       <form onSubmit={searchForDataHandler}>
+        {/* <AutoComplete suggestions={['asdf','aa','om']}/>  */}
         <input
           type="text"
           placeholder="Search for places..."
