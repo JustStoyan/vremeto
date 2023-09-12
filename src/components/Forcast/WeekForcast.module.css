@@ -2,15 +2,14 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  gap: 1rem;
+  gap: 3rem;
 }
 
 @media screen and (max-width: 900px) {
   .wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    gap: 1rem;
+    width: 100%;
+    justify-content: space-between;
+    gap: 20px;
     overflow-x: auto;
   }
 }

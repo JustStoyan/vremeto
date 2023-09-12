@@ -8,8 +8,8 @@ import { toast } from "react-toastify";
 export const rtkQueryErrorLogger: Middleware =
   (api: MiddlewareAPI) => (next) => (action) => {
     if (isRejectedWithValue(action)) {
-
-      toast.error(action.payload.data.message, {
+      // console.log(action)
+      toast.error(`${action.payload.data.message} the current data remains.`, {
         position: "top-right",
         autoClose: 2000,
         hideProgressBar: true,
